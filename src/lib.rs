@@ -278,7 +278,7 @@ impl<'a> FastaView<'a> {
     }
 
 
-    pub fn get(&self, i：usize) -> char {
+    pub fn get(&self, i:usize) -> char {
         self.0[i] as char
     }
 }
