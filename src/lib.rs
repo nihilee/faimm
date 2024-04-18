@@ -276,6 +276,11 @@ impl<'a> FastaView<'a> {
     pub fn bases(&self) -> impl Iterator<Item = &'a u8> {
         self.0.iter().filter(|&&b| b & 192 == 64)
     }
+
+
+    pub fn get(&self, i：usize) -> char {
+        self.0[i] as char
+    }
 }
 
 /// Returns a newly allocated, utf8-validated string with the sequence data in `Self`
